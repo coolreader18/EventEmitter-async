@@ -1,7 +1,7 @@
 # events-async-methods
 EventEmitter methods that make them easier to use in async code.
 
-# Usage
+## Usage
 ```js
 const evtAsync = require("events-async-methods");
 const child_process = require("child_process");
@@ -16,7 +16,7 @@ const child_process = require("child_process");
 ```
 Note that all methods return an array, to account for the fact that event emitters can pass multiple arguments to listeners.
 
-## Different versions
+### Different versions
 There are 3 different versions of this module.
 * Default - `require("events-async-methods")`: this accepts an EventEmitter as the first argument,
   and other arguments relevant to the function after it
@@ -27,7 +27,7 @@ There are 3 different versions of this module.
   which you call to modify the prototype. If you pass an argument, it modifies that class/prototype
   instead of the `require("events")` one, for if you'd like to use it on another implemenation of EventEmitters.
 
-# Installation
+## Installation
 
 ```shell
 yarn add events-async-methods
@@ -35,5 +35,5 @@ yarn add events-async-methods
 npm install --save events-async-methods
 ```
 
-# License
+## License
 This project is licensed under the MIT license. Please see the [LICENSE](LICENSE) file for more details.
