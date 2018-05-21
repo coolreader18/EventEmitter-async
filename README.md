@@ -14,6 +14,15 @@ const child_process = require("child_process");
   }
 })();
 ```
+Note that all methods return an array, to account for the fact that event emitters can pass multiple arguments to listeners.
 
 # Installation
 
+```shell
+yarn add eventemitter-async
+# or
+npm install --save eventemitter-async
+```
+
+# License
+This project is licensed under the MIT license. Please see the [LICENSE](LICENSE) file for more details.
