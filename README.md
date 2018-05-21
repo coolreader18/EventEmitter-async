@@ -9,7 +9,12 @@ const child_process = require("child_process");
 (async () => {
   const fork = child_process.fork("./forked.js");
   const [forkMessage] = await evtAsync.promise(fork, "message");
-  for await (let [req, res] of http.createServer().listen(3000)) {
+  console.log(forkMessage);
+})()
+
+(async () => {
+  const server = http.createServer().listen(3000);
+  for await (let [req, res] of evtAsync.asyncIterator(server, "request")) {
     res.end(req.pathname.split("").reverse("").join(""));
   }
 })();
@@ -21,7 +26,8 @@ There are 3 different versions of this module.
 * Default - `require("events-async-methods")`: exports an object whose methods accepts an EventEmitter as the first argument,
   and other arguments relevant to the function after it
 * Bound - `require("events-async-methods/bound")`: exports an object whose methods need an EventEmitter as their `this`
-  argument, and you pass relevant arguments to the function.
+  argument, and you pass relevant arguments to the function. This is good for if you're using the esnext bind syntax,
+  e.g. `await process::evtAsync.promise("message")`.
 * Prototype - `require("events-async-methods/proto")`: modifies the prototype of EventEmitter to have the bound methods.
   Not reccomended for a project where other modules are using EventEmitters. This only returns a function,
   which you call to modify the prototype. If you pass an argument, it modifies that class/prototype
