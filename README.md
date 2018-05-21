@@ -18,10 +18,10 @@ Note that all methods return an array, to account for the fact that event emitte
 
 ### Different versions
 There are 3 different versions of this module.
-* Default - `require("events-async-methods")`: this accepts an EventEmitter as the first argument,
+* Default - `require("events-async-methods")`: exports an object whose methods accepts an EventEmitter as the first argument,
   and other arguments relevant to the function after it
-* Bound - `require("events-async-methods/bound")`: the `this` argument for the function is an EventEmitter,
-  and you pass relevant arguments to the function.
+* Bound - `require("events-async-methods/bound")`: exports an object whose methods need an EventEmitter as their `this`
+  argument, and you pass relevant arguments to the function.
 * Prototype - `require("events-async-methods/proto")`: modifies the prototype of EventEmitter to have the bound methods.
   Not reccomended for a project where other modules are using EventEmitters. This only returns a function,
   which you call to modify the prototype. If you pass an argument, it modifies that class/prototype
