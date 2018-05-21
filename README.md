@@ -3,7 +3,7 @@ EventEmitter methods that make them easier to use in async code.
 
 # Usage
 ```js
-const evtAsync = require("eventemitter-async"); // all lowercase
+const evtAsync = require("events-async-methods");
 const child_process = require("child_process");
 
 (async () => {
@@ -19,9 +19,9 @@ Note that all methods return an array, to account for the fact that event emitte
 # Installation
 
 ```shell
-yarn add eventemitter-async
+yarn add events-async-methods
 # or
-npm install --save eventemitter-async
+npm install --save events-async-methods
 ```
 
 # License
