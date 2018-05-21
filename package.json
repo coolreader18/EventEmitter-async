@@ -2,8 +2,8 @@
   "name": "EventEmitter-async",
   "version": "0.1.0",
   "description":
-    "EventEmiiter methods that make it easier to use them in async code.",
-  "main": "index.mjs",
+    "EventEmitter methods that make them easier to use in async code.",
+  "main": "index.js",
   "repository": "https://github.com/coolreader18/EventEmitter-async",
   "author": "coolreader18",
   "license": "MIT"
