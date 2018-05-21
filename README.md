@@ -29,7 +29,7 @@ There are 3 different versions of this module.
   argument, and you pass relevant arguments to the function. This is good for if you're using the esnext bind syntax,
   e.g. `await process::evtAsync.promise("message")`.
 * Prototype - `require("events-async-methods/proto")`: modifies the prototype of EventEmitter to have the bound methods.
-  Not reccomended for a project where other modules are using EventEmitters. This only returns a function,
+  Not recommended for a project where other modules are using EventEmitters. This only returns a function,
   which you call to modify the prototype. If you pass an argument, it modifies that class/prototype
   instead of the `require("events")` one, for if you'd like to use it on another implemenation of EventEmitters.
 
