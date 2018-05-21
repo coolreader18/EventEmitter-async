@@ -1,4 +1,4 @@
-# EventEmitter Async
+# events-async-methods
 EventEmitter methods that make them easier to use in async code.
 
 # Usage
