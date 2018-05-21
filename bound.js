@@ -6,7 +6,7 @@ Object.assign(exports, {
   },
   promiseErrorFirst(event) {
     return new Promise((res, rej) => {
-      this.once(event, (err, ...data) => err ? rej(err), res(data));
+      this.once(event, (err, ...data) => err ? rej(err) : res(data));
     });
   },
   async *asyncIterator(event) {
