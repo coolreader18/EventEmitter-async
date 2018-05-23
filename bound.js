@@ -11,7 +11,7 @@ Object.assign(exports, {
   },
   asyncIterator(...args) {
     return {
-      [Symbol.iterator]: this[Symbol.iterator].bind(this, ...args)
+      [Symbol.iterator]: exports[Symbol.iterator].bind(this, ...args)
     };
   },
   defaultEvent: "message",
