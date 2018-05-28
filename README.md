@@ -12,7 +12,9 @@ const child_process = require("child_process");
   const fork = child_process.fork("./forked.js");
   const [forkMessage] = await evtAsync.promise(fork, "message");
   console.log(forkMessage);
-})()(async () => {
+})();
+
+(async () => {
   const server = http.createServer().listen(3000);
   for await (let [req, res] of evtAsync.asyncIterator(server, "request")) {
     res.end(
