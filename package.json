@@ -1,15 +1,17 @@
 {
   "name": "events-async-methods",
   "version": "0.1.1",
-  "description": "EventEmitter methods that make them easier to use in async code.",
+  "description":
+    "EventEmitter methods that make them easier to use in async code.",
   "main": "index.js",
   "repository": "https://github.com/coolreader18/events-async-methods",
   "author": "coolreader18",
-  "keywords": [
-    "events",
-    "EventEmitter",
-    "async",
-    "promises"
-  ],
-  "license": "MIT"
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": ["events", "EventEmitter", "async", "promises"],
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "1.0.0-beta.4"
+  }
 }

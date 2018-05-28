@@ -10,7 +10,7 @@ Object.assign(exports, {
       [Symbol.iterator]: exports[Symbol.iterator].bind(this, ...args)
     };
   },
-  promise(event = this.defaultEvent, { errorFirst }) {
+  promise(event = this.defaultEvent, { errorFirst } = {}) {
     return new Promise((res, rej) => {
       this.once(event, (...data) => {
         if (errorFirst) {
@@ -23,7 +23,7 @@ Object.assign(exports, {
   },
   [Symbol.iterator](
     event = this.defaultEvent,
-    { count, doneEvent = this.defaultDoneEvent, doneTest }
+    { count, doneEvent = this.defaultDoneEvent, doneTest } = {}
   ) {
     let res, rej;
     let reps = 0;

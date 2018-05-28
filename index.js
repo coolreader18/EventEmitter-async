@@ -1,3 +1,8 @@
-module.exports = Object.keys(require("./bound"))
-  .map(cur => ((cur[1] = cur[1].call.bind(cur[1])), cur))
+module.exports = Object.entries(require("./bound"))
+  .map(([key, val]) => {
+    if (typeof val === "function") {
+      val = val.call.bind(val);
+    }
+    return [key, val];
+  })
   .reduce((o, [k, v]) => ((o[k] = v), o), {});
